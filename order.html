@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT PROJECT</title>
+
+    <!--design tag-->
+    <style>
+        body {
+            background-image: url('https://t3.ftcdn.net/jpg/13/03/45/48/360_F_1303454894_BL6k0PPVqn3D6Cqa4Ad4chItdusVFZv0.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+           .header {
+      background: linear-gradient(80deg, #401e1e, #7a511a5b, #150105);
+      color: rgb(168, 137, 71);
+      padding: 40px 20px;
+      border-radius: 15px 15px 0 0;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(58, 30, 30, 0.2);
+    }
+     h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+
+     .business_hours {
+      margin-top: 20px;
+      border-radius: 15px;
+     background: linear-gradient(80deg, #401e1e, #7a511a5b, #150105);
+      color: white;
+      box-shadow: 0px 6px 18px rgba(0,0,0,0.2);
+      padding: 15px;
+      text-align: center;
+    }
+
+        #textofnav{
+        color: rgb(127, 40, 37);
+        font-family: monospace, Lucida Console;
+        font-weight: bold;
+        font-size: 20px;
+        position: relative;
+        color: rgb(192, 158, 84) !important;
+   
+    }
+
+
+
+    .custom-navbar {
+  background: linear-gradient(80deg,#401e1e, #7a511a5b, #150105);
+  padding: 15px 20px;
+  box-shadow: 0 4px 12px rgba(192, 158, 84);
+  border-radius: 0 0 15px 15px;
+   }
+
+    </style>
+</head>
+
+<!--start of body tag-->
+<body class="container mt-4"> <!--makes table container-->
+    <div class="text-center bg-secondary text-white p-3 rounded">
+
+
+          <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html" id="textofnav">Snorlet</a>
+      <div class="navbar-nav">
+        <a class="nav-link active" href="index.html" id="textofnav">Home</a>
+        <a class="nav-link" href="order.html" id="textofnav">Order Now</a>
+        <a class="nav-link" href="contact.html" id="textofnav">Contact Us</a>
+      </div>
+    </div>
+  </nav>
+
+<br><br>
+   <!-- Head -->
+
+  <div class="container mt-4">
+  <div class="header">
+
+         <h1>Food Ordering System ☀</h1> <!--Heading-->
+         <h2>Order now!</h2><!--subtitle-->
+
+         <br><br>
+
+         <h2>Food Menu:</h2>
+        <div class="menu">
+           <input type="checkbox" id="Pesto Pasta">Pesto Pasta (₱170)<br>
+           <input type="checkbox" id="Tomato Premium Pasta">Tomato Premium Pasta (₱1220)<br>
+           <input type="checkbox" id="Scallop Pasta">Scallop Pasta (₱230)<br>
+           <input type="checkbox" id="Leche Flan Special">Leche Flan Special (₱60)<br>
+           <input type="checkbox" id="Grape Juice">Grape Juice (₱40)<br>
+         </div>
+        
+         <!--button-->
+          <button py-click="calculate_order">Order</button> <!-- shows items + total -->
+          <div id="compute"></div> 
+
+
+         <br>
+
+        <!--placeholders-->
+        <h2>Customer Delivery Information:</h2>
+        <input type="text" id="name" placeholder="Enter your name">
+        <input type="number" id="number" placeholder="Enter your number">
+        <input type="text" id="location" placeholder="Enter your location">
+
+        <!--button-->
+        <button py-click="generate_order">Generate Order</button> <!-- shows customer details + summary -->
+<div id="output"></div>
+ 
+    </div>
+
+            <!--business hours-->
+    <br>
+    <div class="business_hours">
+      <p>☀ Open: 6 am to 12 am</p>
+      <span class="badge badge-custom">No reservation = No entry</span>
+    </div>
+
+
+    <!-- connects -->
+    <py-config>
+        [[fetch]]
+        files = ["main.py"]
+    </py-config>
+      <script type="py" src="main2.py"></script>
+
+  
+</div>
+</div>
+</body>
+</html>

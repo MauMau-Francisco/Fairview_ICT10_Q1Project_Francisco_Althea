@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT PROJECT</title>
+
+    <!--design tag-->
+    <style>
+
+       body {
+            background-image: url('https://t3.ftcdn.net/jpg/13/03/45/48/360_F_1303454894_BL6k0PPVqn3D6Cqa4Ad4chItdusVFZv0.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+           .header {
+      background: linear-gradient(80deg, #401e1e, #7a511a5b, #150105);
+      color: rgb(168, 137, 71);
+      padding: 40px 20px;
+      border-radius: 15px 15px 0 0;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(58, 30, 30, 0.2);
+    }
+    .header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+            .contact_information {
+      background: linear-gradient(80deg, #401e1e, #7a511a5b, #150105);
+      color: rgb(194, 158, 80);
+      padding: 40px 20px;
+      border-radius: 15px 15px 0 0;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(58, 30, 30, 0.2);
+    }
+    .contact_information h5 {
+      font-weight: bold;
+      color: #bf9453;
+    }
+
+    .contact_information p {
+      font-weight: bold;
+      color: #bf9453;
+    }
+
+           .rate {
+      background: linear-gradient(80deg, #401e1e, #7a511a5b, #150105);
+      color: rgb(168, 137, 71);
+      padding: 40px 20px;
+      border-radius: 15px 15px 0 0;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(58, 30, 30, 0.2);
+      font-weight: bold;
+      color: #bf9453;
+    }
+
+    .rate h3 {
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+        .business_hours {
+      margin-top: 20px;
+      border-radius: 15px;
+     background: linear-gradient(80deg, #401e1e, #7a511a5b, #150105);
+      color: white;
+      box-shadow: 0px 6px 18px rgba(0,0,0,0.2);
+      padding: 15px;
+      text-align: center;
+    }
+
+        #textofnav{
+        color: rgb(127, 40, 37);
+        font-family: monospace, Lucida Console;
+        font-weight: bold;
+        font-size: 20px;
+        position: relative;
+        color: rgb(192, 158, 84) !important;
+   
+    }
+
+      .custom-navbar {
+  background: linear-gradient(80deg,#401e1e, #7a511a5b, #150105);
+  padding: 15px 20px;
+  box-shadow: 0 4px 12px rgba(192, 158, 84);
+  border-radius: 0 0 15px 15px;
+   }
+
+    </style>
+
+    </head>
+    <body>
+
+
+<!--start of body tag-->
+<body class="container mt-4"> <!--makes table container-->
+    <div class="text-center bg-secondary text-white p-3 rounded">
+
+
+          <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html" id="textofnav">Snorlet</a>
+      <div class="navbar-nav">
+        <a class="nav-link active" href="index.html" id="textofnav">Home</a>
+        <a class="nav-link" href="order.html" id="textofnav">Order Now</a>
+        <a class="nav-link" href="contact.html" id="textofnav">Contact Us</a>
+      </div>
+    </div>
+  </nav>
+
+<br><br>
+   <!-- Head -->
+
+  <div class="container mt-4">
+  <div class="header">
+  <h1>Contact us!</h1>       <!-- contact information title -->
+  <p>We are glad to serve you!</p>
+  </div>
+      
+        <br><br>
+
+  <!--contact informations table-->
+    <div class="contact_information"> <!--div class-->
+    <h5 class="mb-4">Social Medias:</h5>
+    <h5 class="mb-4">Facebook: Snorlet Cookery</h5> <!--heading-->
+    <h5 class="mb-4">Instagram: @snorlet_kitchen</h5>
+    <h5 class="mb-4">Twitter(X): @snorlet122</h5><br><br>
+    <h5 class="mb-4">Location:</h5>
+    <h5 class="mb-4">🔰 Japan, Shibuya, Nakato bld 1764</h5><br><br>
+    <p>✨ Serving you is our top priority!</p>
+</div>
+
+        <br><br>
+
+  <div class="rate">
+        <form> 
+        <h3>Rate Us</h3>
+        <select class="form-control">
+            <option value="none">Choose your rating...</option>
+            <option value="0">1 - not satisfied</option>
+            <option value="20">2 - Improved some areas</option>
+            <option value="40">3 - Alright</option>
+            <option value="60">4 - great</option>
+            <option value="80">5 - Satisfied</option>
+            <option value="100">6 - Super Satisfied</option>
+                </select>
+        </form>
+
+        <br>
+
+        <button class="btn btn-default" id="feedbackbutton1" onclick="submit1()">Submit</button>
+
+        <br><br>
+
+        <h3>Place your feedback!</h3>
+        <br>
+
+        <textarea class="form-control" placeholder="Type here..."></textarea>   <br>
+        <button class="btn btn-default"  onclick="submit2()">Submit</button>
+        </div>
+    </div>
+
+
+
+
+        <!--business hours-->
+    <br>
+    <div class="business_hours">
+      <p>☀ Open: 6 am to 12 am</p>
+      <span class="badge badge-custom">No reservation = No entry</span>
+    </div>
+  </div>
+</div>
+</div>
+
+    </body>
